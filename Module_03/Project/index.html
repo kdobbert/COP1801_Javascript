@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){ //button click method
+    var name = $('#name').val(); //store the value of textbox into variable
+    $("#display").text(name); //display the value of the textbox using Id
+    $("#display").css({"color": "blue", "font-size": "200%"}); //styling the text
+});
+});
+</script>
+</head>
+<body>
+Enter your message
+<input type="text" id="name">
+<button>Click the button for what you entered</button>
+<p id="display"></p>
+</body>
+</html>
