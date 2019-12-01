@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Then names entered and sorted are:</h1>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+<script>
+var namesToPrompt = 3,
+    names         = [ ];
+
+while( namesToPrompt-- ) {
+    names.push( prompt('Please enter a name') );
+}
+names.sort( byName );
+
+document.write(names);
+
+
+function byName( a, b ) {
+    return a.localeCompare( b );
+
+}
+</script>
+<body>
