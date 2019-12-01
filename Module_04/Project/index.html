@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<body>
+
+        <p class="button" id="display"></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var letter = document.getElementById("myInput").value;
+  var text;
+
+
+  // If the letter is "c"
+  if (letter === "student" || letter === "Student") {
+    text = "Welcome to Rasmussen";
+
+  // If the letter is "b" or "d"
+} else if (letter === "Professor" || letter === "professor") {
+    text = "Welcome Professor";
+
+  // If the letter is anything else
+  } else {
+    text = "Please enter student or professor for a different message";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+<script>
+$(document).ready(function(){
+$("button").click(function(){ //button click method
+    var name = $('#name').val(); //store the value of textbox into variable
+    $("#display").text("Nice to meet you" + " " + name); //display the value of the textbox using Id
+    $("#display").css({"color": "blue", "font-size": "200%"});
+
+});
+});
+</script>
+
+</head>
+<body>
+  <br><p>Please enter Student or Professor
+
+  <input id="myInput" type="text"></p></br>
+  <br><p>Enter your Name
+  <input type="text" id="name"></p></br>
+<button onclick="myFunction()">Click for message</button>
+
+
+</html>
