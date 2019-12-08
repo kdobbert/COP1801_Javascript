@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script>
+function getValues() {
+    var result = "";
+result += "First Name: " + document.forms["myForm"]["fname"].value + "<br>";
+result += "Last Name: " + document.forms["myForm"]["lname"].value + "<br>";
+result += "Address: " + document.forms["myForm"]["address"].value + "<br>";
+result += "City: " + document.forms["myForm"]["city"].value + "<br>";
+result += "State: " + document.forms["myForm"]["state"].value + "<br>";
+
+document.getElementById("output").innerHTML = result;
+}
+</script>
+</head>
+<body>
+<h2>Enter the information below</h2>
+<div id = "data">
+    <form id = "person">
+        <br><br>
+        First Name: <input id = "fname" name = "fname" type = "text">
+        Last Name: <input id = "lname" name = "lname" type = "text">
+        <br><br>
+        Address: <input id = "address" name = "address" type = "text">
+        <br><br>
+        City: <input id = "city" name = "city" type = "text">
+        State: <input id = "state" name = "state" type = "text">
+
+
+        <br><br>
+        <input id = "button" type = "button" value = " Reset " onclick = "ResetForm()">&nbsp&nbsp&nbsp
+        <button type"button" onclick="getValues()">Submit</button><br>
+
+    </form>
+</div>
+
+<script>
+
+function ResetForm() {
+    document.getElementById("person").reset();
+}
+    </script>
+    <div>
+  <p id="output" />
+  </div>
+</body>
+</html>
